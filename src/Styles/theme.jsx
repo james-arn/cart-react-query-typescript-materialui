@@ -1,11 +1,13 @@
 import { createTheme } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
+import "../index.css";
 
+const font = "'Rowdies', cursive";
 const primaryColor = "#ff5722"; //specific hex keys
 const secondaryColor = "#f50057";
 const dangerColor = red[900]; //in built shades in mUI
 
-export const customTheme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       main: primaryColor,
@@ -16,6 +18,9 @@ export const customTheme = createTheme({
     error: {
       main: dangerColor,
     },
+  },
+  typography: {
+    fontFamily: font,
   },
   // Overrides:
   components: {
